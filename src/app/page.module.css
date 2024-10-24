@@ -1,0 +1,92 @@
+.body {
+  position: relative;
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: grayscale(1);
+
+  &::after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+  }
+  
+  .main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    .h1 {
+      font-size: 60px;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .form {
+      max-width: 320px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 1rem 1rem;
+      margin: 0.6rem auto;
+      border-radius: 1.4rem;
+      border: 2px solid white;
+      height: 40px;
+      background: transparent;
+      color: white;
+      outline: none;
+      font-size: 1.2rem;
+    }
+
+    .input::placeholder {
+      color: white;
+      font-size: 1.2rem;
+      padding: 1rem 0rem;
+    }
+
+    .mensagem { 
+      width: 100%;
+      text-align: center;
+    }
+
+    .erro {
+      color: red;
+      background: white;
+      padding: 0.3rem 0;
+      border-radius: 2rem;
+      border: 2px solid red;
+    }
+
+    .sucesso {
+      color: green;
+      background: white;
+      padding: 0.3rem 0;
+      border-radius: 2rem;
+      border: 2px solid green;
+    }
+
+    .button {
+      margin: 1rem 0;
+      width: 100%;
+      height: 40px;
+      border-radius: 2rem;
+      border: 2px solid white;
+      background: #782fff;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .button:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
